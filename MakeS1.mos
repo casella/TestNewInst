@@ -1,0 +1,19 @@
+loadFile("MakeS.mo");getErrorString();
+loadModel(Modelica);getErrorString();
+loadString("
+model S1_5000
+  extends MakeS.S1(N = 5000);
+end S1_5000;
+model S1_10000
+  extends MakeS.S1(N = 10000);
+end S1_10000;
+model S1_100000
+  extends MakeS.S1(N = 100000);
+end S1_100000;
+");getErrorString();
+cd("./tmp");getErrorString();
+simulate(S1_5000);getErrorString();
+simulate(S1_10000);getErrorString();
+simulate(S1_100000);getErrorString();
+
+
