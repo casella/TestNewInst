@@ -11,3 +11,6 @@ To instantiate the test cases with textual output, run
 To instantiate the test cases without textual output and time measurement (on Linux), run
   time omc -d=newInst -q -i=System_NNN Networks.mo System_NNN.mo
   
+The number of raw equations is about 50*N
+
+  
