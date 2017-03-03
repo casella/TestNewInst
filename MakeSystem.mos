@@ -1,10 +1,10 @@
 loadFile("MakeSystem.mo");getErrorString();
 loadModel(Modelica);getErrorString();
 loadString("
-model System_100000
-  extends MakeSystem.System(N = 100000);
-end System_100000;
+model System_200000
+  extends MakeSystem.System(N = 200000);
+end System_200000;
 ");getErrorString();
 cd("./tmp");getErrorString();
-simulate(System_100000);getErrorString();
+simulate(System_200000);getErrorString();
 
