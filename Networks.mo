@@ -23,16 +23,24 @@ package Networks
   model NetworkComponent
     Pin p,n;
     parameter Resistance R;
-    Resistor R1(R = R/4);
-    Resistor R2(R = R/4);
-    Resistor R3(R = R/4);
-    Resistor R4(R = R/4);
+    Resistor R1(R = R/8);
+    Resistor R2(R = R/8);
+    Resistor R3(R = R/8);
+    Resistor R4(R = R/8);
+    Resistor R5(R = R/8);
+    Resistor R6(R = R/8);
+    Resistor R7(R = R/8);
+    Resistor R8(R = R/8);
   equation
     connect(R1.p, p);
     connect(R1.n, R2.p);
     connect(R2.n, R3.p);
     connect(R3.n, R4.p);
-    connect(R4.n, n);
+    connect(R4.n, R5.p);
+    connect(R5.n, R6.p);
+    connect(R6.n, R7.p);
+    connect(R7.n, R8.p);
+    connect(R8.n, n);
   end NetworkComponent;
   
   model VoltageSource
